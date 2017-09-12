@@ -3,11 +3,14 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+A: To find naked twins, we need to look for two boxes in the same unit which have the same value and it's length should be 2. 
+let say we have found two boxes 'A3' and 'A5' in the row_unit with same value '23'. so that means 2 and 3 are the only options for squares 'A3' and 'A5'. and not other boxes in the same unit can have value '2' or '3'. so we must eliminate '2' and '3' from the values of all boxes which contain these values and those boxes must have more than 1 values.
+So in the programming part, i have taken each units in to consideration and tried to find a possible twins. if there is a match in the specific unit. then i have applied eliminate strategy with value of twin box to all boxes in the same unit.
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: In the diagonal sudoku,we need to take two main diagonals into consideration. the numbers 1 to 9 should all appear exactly once in each diagonal. so that means when we calculate peers for those boxes which are in the two main diagonals, we need to consider boxes in diagonals.
+So in the programming part, i have added one more constraint called diagonal_units. and i have added diagonal_units with the main unit list which contains row_units,col_units and box_units. so at the time peer calculation, the diagonal_units should be taken in to consideration.
 
 ### Install
 
